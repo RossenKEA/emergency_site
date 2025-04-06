@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/infographic.css" />
+    <link rel="stylesheet" href="css/forms.css" />
+    <link rel="icon" type="image/png" href="img/fav.png" />
+    <title>Emergency Site</title>
+  </head>
+  <body id="register">
+    <header>
+      <nav>
+        <div id="logotype-wrapper">
+          <a href="index.html"> <img src="img/logo.png" alt="Logotype" /> </a>
+        </div>
+        <ul class="menu">
+          <li><a class="menuItem" href="instruction.html">Instruktion </a></li>
+          <li><a class="menuItem" href="register.html">Kæplicens</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>KÆPLICENS</h1>
+      <section id="form-section">
+        <article id="form-info">
+          <h2>Ansøg om kæplicens</h2>
+        </article>
+        <form id="webform">
+          <fieldset>
+            <legend>Helbredsoplysninger</legend>
+            <label for="observation"
+              >Her skal du skrive hvis du har diagnoser eller andre tilstande
+              der kan være relevante for dit brug af kæp</label
+            >
+            <div style="display: flex">
+              <textarea
+                id="observation"
+                name="observation"
+                rows="5"
+                cols="40"
+                placeholder="..."
+                maxlength="300"
+              ></textarea>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Kontaktoplysninger</legend>
+
+            <label for="full-name">Dit navn</label>
+            <div style="display: flex">
+              <input
+                id="full-name"
+                name="fname"
+                type="text"
+                placeholder="Dit fulde navn"
+                required
+                minlength="3"
+                maxlength="70"
+              />
+            </div>
+
+            <label for="email">Din email</label>
+            <div style="display: flex">
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="Din emailadresse"
+                required
+              />
+            </div>
+
+            <label for="phone">Dit telefonnummer</label>
+            <div style="display: flex; gap: 10px">
+              <select name="country-code" id="country-code">
+                <option value="+45">+45 (Danmark)</option>
+                <option value="+46">+46 (Sverige/forræder)</option>
+              </select>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                placeholder="Telefonnummer"
+                required
+                minlength="8"
+                maxlength="8"
+                pattern="\d{8}"
+              />
+            </div>
+          </fieldset>
+
+          <button type="submit">Indsend</button>
+        </form>
+      </section>
+      <section id="form-summary">
+        <h2>Foreløbig krigsgodkendelse</h2>
+        <article>
+          <p class="placeholder">
+            Du skal bruge en kæplicens før du må gå i krig på øresund.
+            <br /><br />Her kan du påbegynde ansøgningen om officiel kæplicens.
+            <br /><br />Når du er færdig indsendes dine indtastede oplysninger,
+            som vil blive vurderet af Styrelsen for Dansk Kæppeforsvar.
+            <br /><br />
+            Du bliver kontaktet hvis vi har brug for yderligere oplysninger.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <nav class="some">
+        <ul>
+          <li><a href="">link</a></li>
+          <li><a href="">link</a></li>
+          <li><a href="">link</a></li>
+          <li><a href="">link</a></li>
+        </ul>
+      </nav>
+      <nav class="another">
+        <ul>
+          <li><a href="">link</a></li>
+          <li><a href="">link</a></li>
+          <li><a href="">link</a></li>
+          <li><a href="">link</a></li>
+        </ul>
+      </nav>
+      <nav class="yetanother">
+        <ul>
+          <li><a href="">link</a></li>
+          <li><a href="">link</a></li>
+          <li><a href="">link</a></li>
+          <li><a href="">link</a></li>
+        </ul>
+      </nav>
+    </footer>
+    <script>
+      document
+        .getElementById("webform")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          if (this.checkValidity()) {
+            alert(
+              "Din kæplicens er indsendt og vil blive behandlet af myndighederne."
+            );
+            this.reset();
+          } else {
+            this.reportValidity();
+          }
+        });
+    </script>
+
+    <script src="js/main.js"></script>
+    <script src="js/burger.js"></script>
+  </body>
+</html>

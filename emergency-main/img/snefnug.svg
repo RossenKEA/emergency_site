@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="snowflake" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 342 130">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #d7edff;
+        stroke-width: 3px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3 {
+        opacity: .47;
+      }
+
+      .cls-2 {
+        stroke: #c4e3f7;
+        stroke-width: 4px;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="cls-2" d="M138.63,70.71s49.7-4.71,64.47-.95"/>
+    <line class="cls-2" x1="168.33" y1="98.72" x2="176.62" y2="31.1"/>
+    <line class="cls-2" x1="147.63" y1="39.26" x2="190.72" y2="102.42"/>
+    <path class="cls-2" d="M142.35,97.82s49.44-49.15,53.54-59.31"/>
+    <polyline class="cls-1" points="139.4 50.43 158.58 54.04 159 35.15"/>
+    <polyline class="cls-1" points="140.27 82.89 149.75 69.25 135.23 62.35"/>
+    <polyline class="cls-1" points="153.05 99.14 154.17 87.04 140.58 87.24"/>
+    <polyline class="cls-1" points="181.36 102.24 169.8 86.51 156.61 100.03"/>
+    <polyline class="cls-1" points="198 85.98 178.5 84.96 180.6 103.74"/>
+    <polyline class="cls-1" points="202.44 56.12 187.37 68.53 201.6 80.96"/>
+    <polyline class="cls-1" points="182.23 34.75 186.22 53.86 203.84 47.04"/>
+    <polyline class="cls-1" points="160.61 36.34 173.48 51.02 185.47 36.42"/>
+  </g>
+  <g class="cls-3">
+    <path class="cls-2" d="M235.9,47.77s29.98-2.84,38.89-.57"/>
+    <line class="cls-2" x1="253.81" y1="64.66" x2="258.81" y2="23.87"/>
+    <line class="cls-2" x1="241.32" y1="28.79" x2="267.32" y2="66.89"/>
+    <path class="cls-2" d="M238.14,64.12s29.82-29.65,32.3-35.78"/>
+    <polyline class="cls-1" points="236.36 35.53 247.93 37.71 248.18 26.31"/>
+    <polyline class="cls-1" points="236.88 55.11 242.6 46.88 233.84 42.72"/>
+    <polyline class="cls-1" points="244.59 64.91 245.27 57.61 237.07 57.74"/>
+    <polyline class="cls-1" points="261.67 66.79 254.7 57.3 246.74 65.45"/>
+    <polyline class="cls-1" points="271.71 56.98 259.95 56.36 261.22 67.69"/>
+    <polyline class="cls-1" points="274.39 38.96 265.3 46.45 273.88 53.95"/>
+    <polyline class="cls-1" points="262.2 26.07 264.6 37.6 275.23 33.48"/>
+    <polyline class="cls-1" points="249.16 27.03 256.92 35.89 264.15 27.08"/>
+  </g>
+  <g class="cls-3">
+    <path class="cls-2" d="M67.65,84.88s29.98-2.84,38.89-.57"/>
+    <line class="cls-2" x1="85.56" y1="101.78" x2="90.56" y2="60.98"/>
+    <line class="cls-2" x1="73.07" y1="65.9" x2="99.07" y2="104.01"/>
+    <path class="cls-2" d="M69.89,101.24s29.82-29.65,32.3-35.78"/>
+    <polyline class="cls-1" points="68.11 72.64 79.68 74.82 79.93 63.43"/>
+    <polyline class="cls-1" points="68.63 92.23 74.35 84 65.59 79.83"/>
+    <polyline class="cls-1" points="76.34 102.03 77.02 94.73 68.82 94.85"/>
+    <polyline class="cls-1" points="93.42 103.9 86.45 94.41 78.49 102.57"/>
+    <polyline class="cls-1" points="103.46 94.09 91.7 93.48 92.97 104.8"/>
+    <polyline class="cls-1" points="106.14 76.07 97.05 83.56 105.63 91.06"/>
+    <polyline class="cls-1" points="93.95 63.18 96.35 74.71 106.98 70.6"/>
+    <polyline class="cls-1" points="80.91 64.15 88.67 73 95.9 64.19"/>
+  </g>
+  <g class="cls-3">
+    <path class="cls-2" d="M26.72,39.16s21.96-2.08,28.48-.42"/>
+    <line class="cls-2" x1="39.84" y1="51.54" x2="43.5" y2="21.66"/>
+    <line class="cls-2" x1="30.69" y1="25.27" x2="49.73" y2="53.17"/>
+    <path class="cls-2" d="M28.36,51.14s21.84-21.71,23.65-26.2"/>
+    <polyline class="cls-1" points="27.06 30.2 35.53 31.8 35.72 23.45"/>
+    <polyline class="cls-1" points="27.44 44.54 31.63 38.51 25.21 35.47"/>
+    <polyline class="cls-1" points="33.09 51.72 33.58 46.37 27.58 46.46"/>
+    <polyline class="cls-1" points="45.6 53.09 40.49 46.14 34.66 52.11"/>
+    <polyline class="cls-1" points="52.95 45.91 44.33 45.46 45.26 53.75"/>
+    <polyline class="cls-1" points="54.91 32.71 48.25 38.2 54.54 43.69"/>
+    <polyline class="cls-1" points="45.98 23.27 47.74 31.71 55.52 28.7"/>
+    <polyline class="cls-1" points="36.43 23.98 42.11 30.46 47.41 24.01"/>
+  </g>
+  <g class="cls-3">
+    <path class="cls-2" d="M294.66,76.61s22.72-2.15,29.47-.43"/>
+    <line class="cls-2" x1="308.24" y1="89.42" x2="312.03" y2="58.51"/>
+    <line class="cls-2" x1="298.78" y1="62.24" x2="318.48" y2="91.11"/>
+    <path class="cls-2" d="M296.37,89.01s22.6-22.47,24.47-27.12"/>
+    <polyline class="cls-1" points="295.01 67.34 303.78 68.99 303.98 60.36"/>
+    <polyline class="cls-1" points="295.41 82.18 299.75 75.95 293.11 72.79"/>
+    <polyline class="cls-1" points="301.26 89.61 301.77 84.08 295.55 84.17"/>
+    <polyline class="cls-1" points="314.2 91.03 308.91 83.84 302.88 90.02"/>
+    <polyline class="cls-1" points="321.8 83.59 312.89 83.13 313.85 91.71"/>
+    <polyline class="cls-1" points="323.83 69.94 316.95 75.62 323.45 81.3"/>
+    <polyline class="cls-1" points="314.6 60.17 316.42 68.91 324.47 65.79"/>
+    <polyline class="cls-1" points="304.71 60.9 310.6 67.61 316.08 60.94"/>
+  </g>
+</svg>
