@@ -7,6 +7,7 @@
   /* border: 1px solid var(--border-color); */
   border-radius: var(--border-radius);
   height: minmax(200px, min-content);
+  box-shadow: 0 0 10px rgba(69, 123, 157, 0.2);
 }
 .daily_text {
   display: grid;
@@ -35,6 +36,7 @@
   background-color: var(--article-background-color);
   display: grid;
   grid-template-rows: repeat(min-content);
+  box-shadow: 0 0 10px rgba(69, 123, 157, 0.2);
   gap: 0.4rem;
   padding: 1rem 0;
   /* border: 1px solid var(--border-color); */
@@ -53,7 +55,7 @@
   margin: 0 0 1rem 0;
 }
 .news_card:first-child:before {
-  content: "BREAKING NEWS";
+  content: "NYHEDER";
   background-color: var(--headline-bg-color-inverted);
   color: var(--headline-color-inverted);
   font-family: var(--headline-font);
@@ -83,8 +85,63 @@
   text-align: center;
   text-decoration: none;
   width: max-content;
+  cursor: pointer;
 }
 .cta_btn:after {
   content: "\2192";
   margin-left: 0.5rem;
+}
+
+.pan1 {
+  height: 200px; 
+  background-image: url("../img/teaser-instruks.png"); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+}
+.pan2 {
+  height: 200px; 
+  background-image: url("../img/teaser-licens.png"); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+}
+
+@keyframes panorama {
+  from {
+    background-position: 50% 0%;
+  }
+  to {
+    background-position: 75% 0%;
+  }
+}
+
+.pan_animation {
+  animation: panorama 1s ease-in-out infinite alternate;
+}
+
+.stop {
+  animation-play-state: paused;
+}
+
+@media (max-width: 800px) {
+  .daily_card {
+    grid-template-columns: 1fr;
+  }
+  .daily_card img {
+    display: block;
+    margin: auto;
+  }
+  .news_card img {
+    display: block;
+    margin: auto;
+  }
+
+  .pan_animation {
+    animation: none;
+  }
+  .pan1, .pan2 {
+    background-size: auto;
+    background-position: 50%;
+  }
 }
