@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/burger.css" />
     <link rel="stylesheet" href="css/cards.css" />
     <link rel="icon" type="image/png" href="img/fav.png" />
+    <link id="theme" rel="stylesheet" href="css/custom.css" />
     <title>Emergency Site</title>
   </head>
   <body id="frontpage">
@@ -24,58 +25,192 @@
         </ul>
       </nav>
     </header>
+    <div class="theme-toggle">
+      <label class="switch">
+        <input type="checkbox" id="theme-toggle" />
+        <span class="slider"></span>
+      </label>
+      <span class="label-text">Darkmode</span>
+    </div>
+    <script>
+      const checkbox = document.getElementById("theme-toggle");
+      const themeLink = document.getElementById("theme");
+
+      // Sync checkbox state with theme on load
+      window.addEventListener("DOMContentLoaded", () => {
+        const currentTheme = themeLink.getAttribute("href");
+        checkbox.checked = currentTheme.includes("dark");
+      });
+
+      checkbox.addEventListener("change", () => {
+        if (checkbox.checked) {
+          themeLink.href = "css/custom_dark.css";
+        } else {
+          themeLink.href = "css/custom.css";
+        }
+      });
+    </script>
     <section id="main-disclamer">
       <div id="main-disclamer-content">
-        <img src="warning" alt="ICON" />
         <div>
-          <h1>Overskrift</h1>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          <h1>Velkommen til Styrelsen for Dansk Kæppeforsvar</h1>
+          <p>
+            Danmarks officielle beredskab ved tilfrosne grænseovergange. <br />
+            Vi regulerer, rådgiver og uddeler kæplicenser med hård, men
+            retfærdig hånd.
+          </p>
         </div>
       </div>
     </section>
     <main>
       <section id="daily">
         <article class="daily_card">
-          <img src="" alt="teaser_img" />
+          <div class="pan1" id="pan1"></div>
           <div class="daily_text">
-            <h2>Teaser</h2>
+            <h2>INSTRUKS</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-              magnam ducimus ea, sed minima asperiores.
+              Naturens vrede og klimaforvirring har skabt den perfekte frosne
+              bro mellem Danmark og Sverige. Find hjælp og info her.
             </p>
-            <a href="" class="cta_btn">Se mere</a>
+            <a href="instruction.html" class="cta_btn">Se mere</a>
           </div>
+          <script>
+            const pan1 = document.getElementById("pan1");
+            pan1.classList.add("pan_animation", "stop");
+
+            pan1.addEventListener("mouseover", function () {
+              this.classList.add("pan_animation");
+              this.classList.remove("stop");
+            });
+
+            pan1.addEventListener("mouseout", function () {
+              this.classList.add("stop");
+              this.classList.remove("pan_animation");
+            });
+          </script>
         </article>
         <article class="daily_card">
-          <img src="" alt="teaser_img" />
+          <div class="pan2" id="pan2"></div>
           <div class="daily_text">
-            <h2>Teaser</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-              magnam ducimus ea, sed minima asperiores.
-            </p>
-            <a href="" class="cta_btn">Se mere</a>
+            <h2>KÆPLICENS</h2>
+            <p>Her kan du påbegynde ansøgningen om officiel kæplicens.</p>
+            <a href="register.html" class="cta_btn">Se mere</a>
           </div>
+          <script>
+            const pan2 = document.getElementById("pan2");
+            pan2.classList.add("pan_animation", "stop");
+
+            pan2.addEventListener("mouseover", function () {
+              this.classList.add("pan_animation");
+              this.classList.remove("stop");
+            });
+
+            pan2.addEventListener("mouseout", function () {
+              this.classList.add("stop");
+              this.classList.remove("pan_animation");
+            });
+          </script>
         </article>
       </section>
       <section id="breaking">
         <article class="news_card">
-          <h3>Nyhed</h3>
-          <p>Lorem ipsum dolor sit, sed minima asperiores.</p>
-          <img src="" alt="news_img" />
-          <a class="cta_btn" href="">Læs mere</a>
+          <h3>Den svenske invasion 1979</h3>
+          <p>
+            Eksperter er stadig uenige om, hvorvidt det bare var skiturister.
+          </p>
+          <img src="img/news-invasion.png" alt="news_img" />
+          <button class="cta_btn" data-dialog="dialog1">Læs mere</button>
+
+          <dialog id="dialog1">
+            <form method="dialog">
+              <h4>Den svenske invasion 1979</h4>
+              <img src="img/news-invasion.png" alt="news_img" />
+              <p>
+                <br />
+                Den kolde vinter i 1979 markerer et mørkt kapitel i dansk-svensk
+                ishistorie.
+                <br /><br />Ifølge officielle dokumenter skulle det dreje sig om
+                “en større gruppe svenske skiturister”, der ved et uheld
+                krydsede Øresund til fods. Men vidner fra Dragør hævder, at
+                gruppen var taktisk organiseret, bar medbragte madpakker med
+                pølser uden remoulade og talte i korte, effektive vendinger.
+                <br /><br />
+                Forsvarsministeriet henlagde sagen i 1981, men mistanken lever
+                videre. Var det bare en uskyldig skisøndag — eller noget langt
+                mere organiseret?
+              </p>
+              <button>Luk</button>
+            </form>
+          </dialog>
         </article>
         <article class="news_card">
-          <h3>Nyhed</h3>
-          <p>Lorem ipsum dolor sit, sed minima asperiores.</p>
-          <img src="" alt="news_img" />
-          <a class="cta_btn" href="">Læs mere</a>
+          <h3>Er din nabo svensk? 7 tegn du skal holde øje med</h3>
+          <p>Mistænkelig ro, Volvo, eller for mange surdejsprojekter?</p>
+          <img src="img/news-nabo.png" alt="news_img" />
+          <button class="cta_btn" data-dialog="dialog2">Læs mere</button>
+
+          <dialog id="dialog2">
+            <form method="dialog">
+              <h4>Er din nabo svensk?</h4>
+              <img src="img/news-nabo.png" alt="news_img" />
+              <p>
+                <i>
+                  En altan uden flag, en bil uden DAB-radio, en nabo der siger
+                  “fika” uden kontekst.</i
+                ><br /><br />
+                Svenskere kan være svære at opdage – især når de har tilpasset
+                sig. I denne guide lister vi 7 tydelige advarselssignaler, du
+                bør kende:
+              </p>
+              <ol>
+                <li>Taler lavmælt, selv når nogen taber noget tungt.</li>
+                <li>Volvo stationcar med usædvanligt ryddeligt bagagerum.</li>
+                <li>Hjemmelavet knækbrød.</li>
+                <li>Overforbrug af birketræ i boligindretning.</li>
+                <li>Pludseligt Lucia-optog i december.</li>
+                <li>Siger “hygge” med lidt for korrekt udtale.</li>
+                <li>Kigger længselsfuldt mod øst, når det fryser.</li>
+              </ol>
+              <p>
+                Hvis du opdager to eller flere af disse, bør du overveje at
+                informere Styrelsen for Dansk Kæppeforsvar.
+              </p>
+              <button>Luk</button>
+            </form>
+          </dialog>
         </article>
         <article class="news_card">
-          <h3>Nyhed</h3>
-          <p>Lorem ipsum dolor sit, sed minima asperiores.</p>
-          <img src="" alt="news_img" />
-          <a class="cta_btn" href="">Læs mere</a>
+          <h3>Undskyldninger svenskerne bruger for at krydse isen</h3>
+          <p>Nej, du glemte ikke "din hat".</p>
+          <img src="img/news-undskyldninger.png" alt="news_img" />
+          <button class="cta_btn" data-dialog="dialog3">Læs mere</button>
+
+          <dialog id="dialog3">
+            <form method="dialog">
+              <h4>Undskyldninger svenskerne bruger</h4>
+              <img src="img/news-undskyldninger.png" alt="news_img" />
+              <p>
+                Hvert år, når Øresund fryser, øges risikoen for utilsigtet
+                svensk nærkontakt. Og med det følger en bølge af mere eller
+                mindre kreative undskyldninger. Her er de hyppigst registrerede:
+              </p>
+              <ol>
+                <li>
+                  “Jeg troede det var en del af vores fritgående grænsepolitik.”
+                </li>
+                <li>“Jeg fulgte bare elgen.”</li>
+                <li>“Min mormor bor lige på den anden side.”</li>
+                <li>“Jeg skulle bare hente min hat.”</li>
+              </ol>
+              <p>
+                Men Styrelsen for Dansk Kæppeforsvar har hørt dem alle før.
+                Vores seneste rapport viser, at 92 % af svenskere der forsøger
+                sig med “hatten”, i virkeligheden har hue på. <br /><br />Vær på
+                vagt — og hav kæppen klar.
+              </p>
+              <button>Luk</button>
+            </form>
+          </dialog>
         </article>
       </section>
     </main>
@@ -106,7 +241,20 @@
         </ul>
       </nav>
     </footer>
-    <!-- <script src="js/main.js"></script> -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const buttons = document.querySelectorAll(".cta_btn");
+
+        buttons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const dialogId = button.getAttribute("data-dialog");
+            const dialog = document.getElementById(dialogId);
+            if (dialog) dialog.showModal();
+          });
+        });
+      });
+    </script>
+    <script src="js/main.js"></script>
     <script src="js/burger.js"></script>
   </body>
 </html>
